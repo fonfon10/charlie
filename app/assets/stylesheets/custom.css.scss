@@ -1,0 +1,137 @@
+$navbar-default-bg: #073B15;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.center{
+  text-align: center;
+}
+
+.jumbotron{
+  background-image: asset-url('golf.jpg');
+  background-size: cover;
+  height: 300px;
+  h1,h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 30px;
+      letter-spacing: -1px;
+      font-weight: bold;
+  }
+}
+
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.btn-xlarge {
+  background-color: #073B15;
+}
+
+.btn-xlarge:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+body {
+  height: 100%;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+
+.description {
+  margin-top: 0;
+
+}
+
+
+.well a {
+
+  color: #073B15;  
+}
+
+.chef_info {
+  margin-top:  10px;
+}
+
+
+.colormatch a {
+
+  color: #073B15;  
+}
+
+.recipe-actions {
+  padding-top: 5px;
+
+  a {
+    color: #fff;
+  }
+}
+
+
+
+
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(4); /* IE */
+  -moz-transform: scale(4); /* FF */
+  -webkit-transform: scale(4); /* Safari and Chrome */
+  -o-transform: scale(4); /* Opera */
+  padding: 10px;
+}
+
+input[type=radio]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(4); /* IE */
+  -moz-transform: scale(4); /* FF */
+  -webkit-transform: scale(4); /* Safari and Chrome */
+  -o-transform: scale(4); /* Opera */
+  padding: 10px;
+}

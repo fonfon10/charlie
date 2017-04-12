@@ -5,48 +5,39 @@
     
     <%= form_for(@hit, :html => {class: "form-horizontal", role: "form"}) do |f| %>
       <div class="form-group">
-        <div class="control-label col-md-1">
+        <div class="control-label col-sm-1">
         </div>
-          <div class="col-sm-1">
-            <%= f.radio_button :digit_left, '0', :checked => true %> 
-            <%= label :digit_left, '0', :class => "playerdigit" %>
-          </div>
-          <div class="col-sm-1">
-            <%= f.radio_button :digit_left, '1' %> 
-            <%= label :digit_left, '1', :class => "playerdigit" %>
-          </div>
-          <div class="col-sm-1">
-            <%= f.radio_button :digit_left, '2' %> 
-            <%= label :digit_left, '2', :class => "playerdigit" %>
-          </div>
-          <div class="col-sm-1">
-            <%= f.radio_button :digit_left, '3' %> 
-            <%= label :digit_left, '3', :class => "playerdigit" %>
-          </div>
-          <div class="col-sm-1">
-            <%= f.radio_button :digit_left, '4' %> 
-            <%= label :digit_left, '4', :class => "playerdigit" %>
-          </div>
-          <div class="col-sm-1">
-            <%= f.radio_button :digit_left, '5' %> 
-            <%= label :digit_left, '5', :class => "playerdigit" %>
-          </div>
-          <div class="col-sm-1">
-            <%= f.radio_button :digit_left, '6' %> 
-            <%= label :digit_left, '6', :class => "playerdigit" %>
-          </div>
-          <div class="col-sm-1">
-            <%= f.radio_button :digit_left, '7' %> 
-            <%= label :digit_left, '7', :class => "playerdigit" %>
-          </div>
-          <div class="col-sm-1">
-            <%= f.radio_button :digit_left, '8' %> 
-            <%= label :digit_left, '8', :class => "playerdigit" %>
-          </div>
-          <div class="col-sm-1">
-            <%= f.radio_button :digit_left, '9' %> 
-            <%= label :digit_left, '9', :class => "playerdigit" %>
-          </div>
+ 
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active btn-digits">
+          <input type="radio" name="digit_left" value="1" id="option1" autocomplete="off" checked> 1
+        </label>
+        <label class="btn btn-primary btn-digits">
+          <input type="radio" name="digit_left" value="2"  id="option2" autocomplete="off"> 2
+        </label>
+        <label class="btn btn-primary btn-digits">
+          <input type="radio" name="digit_left" value="3" id="option3" autocomplete="off"> 3
+        </label>
+      </div>
+
+    <br>
+
+        <div class="control-label col-sm-1">
+        </div>
+
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active btn-digits">
+          <input type="radio" name="digit_right" value="1" id="option1" autocomplete="off" checked> 1
+        </label>
+        <label class="btn btn-primary btn-digits">
+          <input type="radio" name="digit_right" value="2"  id="option2" autocomplete="off"> 2
+        </label>
+        <label class="btn btn-primary btn-digits">
+          <input type="radio" name="digit_right" value="3" id="option3" autocomplete="off"> 3
+        </label>
+      </div>
+
+
 
 
       </div>

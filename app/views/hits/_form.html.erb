@@ -1,24 +1,85 @@
 <%= render 'shared/errors', obj: @hit %>
 
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-sm-12">
     
     <%= form_for(@hit, :html => {class: "form-horizontal", role: "form"}) do |f| %>
       <div class="form-group">
-        <div class="control-label col-md-2">
+        <div class="control-label col-md-1">
         </div>
-          <div class="col-md-8">
-            <%= f.radio_button :player_id, '1', :checked => true %> 
-            <%= label :player_id, '1' %>
-            <%= f.radio_button :player_id, '2' %>
-            <%= label :player_id, '2' %>
+          <div class="col-sm-1">
+            <%= f.radio_button :digit_left, '0', :checked => true %> 
+            <%= label :digit_left, '0', :class => "playerdigit" %>
+          </div>
+          <div class="col-sm-1">
+            <%= f.radio_button :digit_left, '1' %> 
+            <%= label :digit_left, '1', :class => "playerdigit" %>
+          </div>
+          <div class="col-sm-1">
+            <%= f.radio_button :digit_left, '2' %> 
+            <%= label :digit_left, '2', :class => "playerdigit" %>
+          </div>
+          <div class="col-sm-1">
+            <%= f.radio_button :digit_left, '3' %> 
+            <%= label :digit_left, '3', :class => "playerdigit" %>
+          </div>
+          <div class="col-sm-1">
+            <%= f.radio_button :digit_left, '4' %> 
+            <%= label :digit_left, '4', :class => "playerdigit" %>
+          </div>
+          <div class="col-sm-1">
+            <%= f.radio_button :digit_left, '5' %> 
+            <%= label :digit_left, '5', :class => "playerdigit" %>
+          </div>
+          <div class="col-sm-1">
+            <%= f.radio_button :digit_left, '6' %> 
+            <%= label :digit_left, '6', :class => "playerdigit" %>
+          </div>
+          <div class="col-sm-1">
+            <%= f.radio_button :digit_left, '7' %> 
+            <%= label :digit_left, '7', :class => "playerdigit" %>
+          </div>
+          <div class="col-sm-1">
+            <%= f.radio_button :digit_left, '8' %> 
+            <%= label :digit_left, '8', :class => "playerdigit" %>
+          </div>
+          <div class="col-sm-1">
+            <%= f.radio_button :digit_left, '9' %> 
+            <%= label :digit_left, '9', :class => "playerdigit" %>
+          </div>
+
+
+      </div>
+
+
+
+    <br><br>
+
+      <br / >
+
+    <br><br>
+
+      <div class="form-group">
+        <div class="control-label col-sm-1">
+        </div>
+          <div class="col-sm-1">
+            <%= f.label "Head" %> <br />
+            <%= f.check_box :head, {:checked => 1, :unchecked => 0} %> <br />
+          </div>
+          <div class="col-sm-1">
+            <%= f.label "Chest" %> <br />
+            <%= f.check_box :chest, {:checked => 1, :unchecked => 0} %> <br />
+          </div>
+          <div class="col-sm-1">
+            <%= f.label "Back" %> <br />
+            <%= f.check_box :back, {:checked => 1, :unchecked => 0} %> <br />
+          </div>
+
+
           </div>
       </div>
 
-    <div class="field">
-        <%= f.label "Head" %> <br />
-        <%= f.check_box :head, {:checked => 1, :unchecked => 0} %> <br />
-    </div>
+
 
 
 

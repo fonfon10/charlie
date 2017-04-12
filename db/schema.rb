@@ -10,15 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170412034233) do
+ActiveRecord::Schema.define(version: 20170412195334) do
 
   create_table "hits", force: :cascade do |t|
     t.integer  "player_id"
     t.integer  "head"
     t.integer  "chest"
     t.integer  "back"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "digit_left"
+    t.integer  "digit_right"
   end
 
 end

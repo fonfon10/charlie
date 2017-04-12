@@ -6,76 +6,22 @@
     <%= form_for(@hit, :html => {class: "form-horizontal", role: "form"}) do |f| %>
       <div class="form-group">
         <div class="control-label col-sm-1">
+
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+            </label>
+          </div>
+
+
         </div>
  
-      <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-primary active btn-digits">
-          <input type="radio" name="digit_left" value="1" id="option1" autocomplete="off" checked> 1
-        </label>
-        <label class="btn btn-primary btn-digits">
-          <input type="radio" name="digit_left" value="2"  id="option2" autocomplete="off"> 2
-        </label>
-        <label class="btn btn-primary btn-digits">
-          <input type="radio" name="digit_left" value="3" id="option3" autocomplete="off"> 3
-        </label>
-      </div>
-
-    <br>
-
-        <div class="control-label col-sm-1">
-        </div>
-
-      <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-primary active btn-digits">
-          <input type="radio" name="digit_right" value="1" id="option1" autocomplete="off" checked> 1
-        </label>
-        <label class="btn btn-primary btn-digits">
-          <input type="radio" name="digit_right" value="2"  id="option2" autocomplete="off"> 2
-        </label>
-        <label class="btn btn-primary btn-digits">
-          <input type="radio" name="digit_right" value="3" id="option3" autocomplete="off"> 3
-        </label>
-      </div>
-
-
-
-
-      </div>
-
-
-
-    <br><br>
-
-      <br / >
-
-    <br><br>
-
-      <div class="form-group">
-        <div class="control-label col-sm-1">
-        </div>
-          <div class="col-sm-1">
-            <%= f.label "Head" %> <br />
-            <%= f.check_box :head, {:checked => 1, :unchecked => 0} %> <br />
-          </div>
-          <div class="col-sm-1">
-            <%= f.label "Chest" %> <br />
-            <%= f.check_box :chest, {:checked => 1, :unchecked => 0} %> <br />
-          </div>
-          <div class="col-sm-1">
-            <%= f.label "Back" %> <br />
-            <%= f.check_box :back, {:checked => 1, :unchecked => 0} %> <br />
-          </div>
-
-
-          </div>
-      </div>
-
-
-
-
-
-
-
 
 
       <div class="form-group">
@@ -84,6 +30,8 @@
         </div>
       </div>
     <% end %>    
+
+
 
     <div class="col-md-4 col-md-offset-4 colormatch">
       [ <%=  link_to "Cancel request and return to recipe listing", '#' %>]

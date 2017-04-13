@@ -9,7 +9,9 @@ class HitsController < ApplicationController
 
   def show
     last_id = Hit.last.id
-    @previous_hit = Hit.find(@hit.id - 1)
+    if @hit.id > 1
+      @previous_hit = Hit.find(@hit.id - 1)
+    end
     if @hit.id < last_id
       @next_hit = Hit.find(@hit.id + 1)
     end

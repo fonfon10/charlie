@@ -8,14 +8,22 @@
 <br><br><br>
 <br><br><br>
 
-    <%= link_to "<-- Previous Hit", hit_path(@previous_hit), class: "btn btn-xs btn-warning" %>
+
+    <% if @previous_hit.blank? %>
+
+    <% else %>
+      <%= link_to "<-- Previous Hit", hit_path(@previous_hit), class: "btn btn-xs btn-warning" %>
+    <% end %>
 
 
 </div>
 
 <div class="col-sm-3 col-sm-offset-2">
 
-  <h1>Player # <%= @hit.player_id %></h1>
+
+  <h1> <%= link_to "Player #"+@hit.player_id.to_s, player_path(@hit.player_id) %>   </h1>
+
+
 
   <h2>Hit to</h2>
 

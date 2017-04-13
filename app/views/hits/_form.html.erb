@@ -29,33 +29,19 @@
         </div>
 
 
-            <div class="col-sm-3">
-            </div>
+
+
 
             <div class="col-sm-3">
-                <div class="btn-group" data-toggle="buttons">
-                  <br>
-                  <label class="btn btn-primary btn-body ">
-                    <input type="checkbox" name="head_state" value="1" autocomplete="off">Head
-                  </label>
-                </div>
+
+                  <%= f.check_box :head %> <span class="bodylabels">Head</span>
+                  <br><br>
+                  <%= f.check_box :chest %> <span class="bodylabels">Chest</span>
+                  <br><br>
+                  <%= f.check_box :back %> <span class="bodylabels">Back</span>
+
 
                 <br>
-                <div class="btn-group" data-toggle="buttons">
-                  <br>
-                  <label class="btn btn-primary btn-body ">
-                    <input type="checkbox" name="chest_state" value="1" autocomplete="off">Chest
-                  </label>
-                </div>
-
-                <br>
-                <div class="btn-group" data-toggle="buttons">
-                  <br>
-                  <label class="btn btn-primary btn-body ">
-                    <input type="checkbox" name="back_state" value="1" autocomplete="off">Back
-                  </label>
-                </div>
-                <br><br>
 
             </div>
 

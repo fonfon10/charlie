@@ -134,12 +134,14 @@ input[type=radio]
   -webkit-transform: scale(3); /* Safari and Chrome */
   -o-transform: scale(2); /* Opera */
   margin: 5px;
-}
+
 
   label {
     font-size: 300%;
 
   }
+
+}
 
 
 .playerdigit {
@@ -176,4 +178,9 @@ input[type=radio]
     background-color: red;
 }
 
+.bodylabels
+{
+  margin-left: 15px;
+  font-size: 150%;
+}
 

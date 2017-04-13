@@ -30,6 +30,18 @@ class HitsController < ApplicationController
       @hit.head=0
     end
 
+    if params[:chest_state]
+      @hit.chest = 1
+    else
+      @hit.chest=0
+    end
+
+    if params[:back_state]
+      @hit.back = 1
+    else
+      @hit.back=0
+    end
+
     if @hit.save
       flash[:success] = "Hit was created successfully"
       redirect_to hit_path(@hit)
@@ -68,7 +80,7 @@ private
   end
 
   def hit_params
-    params.require(:hit).permit(:head_state, :chest, :back, :digit_left, :digit_right)    
+    params.require(:hit).permit(:comments, :head_state, :chest_state, :back_state, :digit_left, :digit_right)    
   end
 
 end

@@ -145,9 +145,13 @@ input[type=radio]
 }
 
 .btn-digits{
-  margin: 5px;
+  margin: 10px;
   width: 50px;
   height: 50px;
+  font-size: 200%
+}
+.btn-body{
+  margin: 5px;
   font-size: 200%
 }
 
@@ -165,6 +169,5 @@ input[type=radio]
 .btn-primary:focus {
     background-color: red;
 }
-
 
 

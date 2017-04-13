@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170412195334) do
+ActiveRecord::Schema.define(version: 20170413023324) do
 
   create_table "hits", force: :cascade do |t|
     t.integer  "player_id"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170412195334) do
     t.datetime "updated_at",  null: false
     t.integer  "digit_left"
     t.integer  "digit_right"
+    t.text     "comments"
   end
 
 end

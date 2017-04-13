@@ -7,7 +7,13 @@ class HitsController < ApplicationController
   end
 
 
-  def show  
+  def show
+    last_id = Hit.last.id
+    @previous_hit = Hit.find(@hit.id - 1)
+    if @hit.id < last_id
+      @next_hit = Hit.find(@hit.id + 1)
+    end
+
   end
 
 
@@ -32,12 +38,22 @@ class HitsController < ApplicationController
 
 
   def edit
+
   end
 
 
   def update
+
+    @hit.player_id = @hit.digit_left.to_i*10 + @hit.digit_right.to_i
+
+
     if @hit.update(hit_params)
       flash[:success] = "Hit was updated successfully"
+
+          @hit.player_id = @hit.digit_left.to_i*10 + @hit.digit_right.to_i
+          @hit.update(hit_params)
+
+
       redirect_to hit_path(@hit)
     else
       render 'edit'

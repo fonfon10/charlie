@@ -1,18 +1,64 @@
 <%= render 'shared/page_title', title: "Hit Summary" %>
 
 
-<h1>Player # <%= @hit.player_id %></h1>
 
-<h2>Hit to</h2>
+<div class="col-sm-1">
+  
+
+<br><br><br>
+<br><br><br>
+
+    <%= link_to "<-- Previous Hit", hit_path(@previous_hit), class: "btn btn-xs btn-warning" %>
 
 
-<ul>
-  <li><h3>Head:
-    <%= @hit.head %>  </h3></li>
-  <li><h3>Chest: <%= @hit.chest %> </h3></li>
-  <li><h3>Back: <%= @hit.back %> </h3></li>
-</ul>
+</div>
 
-<%= @hit.created_at.strftime("%F") %>
-<br>
-<%= @hit.created_at.strftime("%H:%M") %>
+<div class="col-sm-3 col-sm-offset-2">
+
+  <h1>Player # <%= @hit.player_id %></h1>
+
+  <h2>Hit to</h2>
+
+
+  <ul>
+    <li><h3>Head:
+      <%= @hit.head %>  </h3></li>
+    <li><h3>Chest: <%= @hit.chest %> </h3></li>
+    <li><h3>Back: <%= @hit.back %> </h3></li>
+  </ul>
+
+  <br>
+
+    <%= simple_format(@hit.comments) %>
+
+
+
+  <%= @hit.created_at.strftime("%F") %> @ 
+  <%= @hit.created_at.strftime("%H:%M") %>
+
+  <br><br><br>
+
+      <%= link_to "Edit Hit", edit_hit_path(@hit), class: "btn btn-xs btn-info" %>
+
+
+</div>
+
+
+<div class="col-sm-1">
+  
+
+<br><br><br>
+<br><br><br>
+
+
+    <% if @next_hit.blank? %>
+      <%= link_to "New Hit", new_hit_path, class: "btn btn-xs btn-danger" %>
+
+    <% else %>
+      <%= link_to "Next Hit -->", hit_path(@next_hit), class: "btn btn-xs btn-warning" %>
+  <% end %>
+
+
+
+
+</div>

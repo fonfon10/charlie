@@ -144,50 +144,17 @@ input[type=radio]
 }
 
 
-.playerdigit {
-  font-size: 300%;
-  float: right;
-  margin-top: -85px;
-  margin-right: 50px;
-
-}
-
-.btn-digits{
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  font-size: 200%
-}
-.btn-body{
-  margin: 5px;
-  font-size: 200%
-}
-
-
-.btn {
-
-  margin:0 auto;
-  display:block;
-}
-
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited,
-.btn-primary:focus {
-    background-color: red;
-}
-
 .bodylabels
 {
-  margin-left: 15px;
+  margin-left: 25px;
   font-size: 150%;
+  font-style: bold;
 }
 
 .digitlabels
 {
   margin-left: 15px;
-  font-size: 150%;
+  font-size: 200%;
   margin-top: 3px;
 }
 

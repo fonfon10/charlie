@@ -10,7 +10,7 @@
               <% (0..9).each do |i| %>
                  
                   <%= f.radio_button :digit_left, i %>
-                  <%= label :digit_left, i %>
+                  <span class="digitlabels"><%= i %></span>
                   <br><br>
               <% end %>
 
@@ -21,7 +21,7 @@
             <div class="btn-group" data-toggle="buttons">
               <% (0..9).each do |i| %>
                   <%= f.radio_button :digit_right, i %>
-                  <%= label :digit_right, i %>
+                  <span class="digitlabels"><%= i %></span>
                   <br><br>
               <% end %>
 
@@ -35,9 +35,9 @@
             <div class="col-sm-3">
 
                   <%= f.check_box :head %> <span class="bodylabels">Head</span>
-                  <br><br>
+                  <br><br><br>
                   <%= f.check_box :chest %> <span class="bodylabels">Chest</span>
-                  <br><br>
+                  <br><br><br>
                   <%= f.check_box :back %> <span class="bodylabels">Back</span>
 
 

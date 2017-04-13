@@ -121,7 +121,7 @@ input[type=checkbox]
   /* Double-sized Checkboxes */
   -ms-transform: scale(4); /* IE */
   -moz-transform: scale(4); /* FF */
-  -webkit-transform: scale(4); /* Safari and Chrome */
+  -webkit-transform: scale(3); /* Safari and Chrome */
   -o-transform: scale(4); /* Opera */
   padding: 10px;
 }
@@ -182,5 +182,12 @@ input[type=radio]
 {
   margin-left: 15px;
   font-size: 150%;
+}
+
+.digitlabels
+{
+  margin-left: 15px;
+  font-size: 150%;
+  margin-top: 3px;
 }
 

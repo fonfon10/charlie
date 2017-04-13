@@ -20,6 +20,8 @@
       <th>Head</th>
       <th>Chest</th>
       <th>Back</th>
+      <th>SLURRING</th>
+      <th>TOTAL</th>
       <th></th>
 
     </tr>
@@ -34,6 +36,8 @@
         <td><%= hit.head  %></td>
         <td><%= hit.chest  %></td>
         <td><%= hit.back  %></td>
+        <td><%= hit.slurring  %></td>
+        <td><%= hit.slurring.to_i+hit.back.to_i+hit.chest.to_i+hit.head.to_i  %></td>
         <td><%= link_to "EDIT", edit_hit_path(hit)  %></td>
 
       </tr>

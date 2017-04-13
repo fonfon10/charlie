@@ -3,6 +3,10 @@ $navbar-default-bg: #073B15;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+
+
+
 .center{
   text-align: center;
 }
@@ -48,6 +52,10 @@ $navbar-default-bg: #073B15;
 
 body {
   height: 100%;
+
+  background: url('/assets/backdrop.jpg') no-repeat center center;
+  background-size: cover;
+
 }
 
 footer {
@@ -157,4 +165,6 @@ input[type=radio]
   font-size: 200%;
   margin-top: 3px;
 }
+
+
 

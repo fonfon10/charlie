@@ -21,8 +21,8 @@ class HitsController < ApplicationController
 
     
 
-    @hit.player_id = params[:digit_left].to_i*10 + params[:digit_right].to_i
-    
+    @hit.player_id = @hit.digit_left.to_i*10 + @hit.digit_right.to_i
+
 
     if params[:head_state]
       @hit.head = 1

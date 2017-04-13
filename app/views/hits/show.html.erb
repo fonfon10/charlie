@@ -2,3 +2,17 @@
 
 
 <h1>Player # <%= @hit.player_id %></h1>
+
+<h2>Hit to</h2>
+
+
+<ul>
+  <li><h3>Head:
+    <%= @hit.head %>  </h3></li>
+  <li><h3>Chest: <%= @hit.chest %> </h3></li>
+  <li><h3>Back: <%= @hit.back %> </h3></li>
+</ul>
+
+<%= @hit.created_at.strftime("%F") %>
+<br>
+<%= @hit.created_at.strftime("%H:%M") %>

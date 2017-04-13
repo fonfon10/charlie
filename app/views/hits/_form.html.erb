@@ -6,32 +6,22 @@
     <div class="form-group">
         <div class="col-sm-1">
             <div class="btn-group" data-toggle="buttons">
-              <br>
-              <label class="btn btn-primary active btn-digits ">
-                <input type="radio" name="digit_left" value= "0" id="digit_left0" autocomplete="off">0
-              </label>
 
-              <% (1..9).each do |i| %>
+              <% (0..9).each do |i| %>
                  <br>
-                  <label class="btn btn-primary btn-digits">
-                    <input type="radio" name="digit_left" value= '<%= i %>' id='digit_left<%= i %>' autocomplete="off"> <%= i %>
-                  </label>
+                  <%= f.radio_button :digit_left, i %>
+                  <%= label :digit_left, i %>
               <% end %>
 
             </div>
         </div>
+
         <div class="col-sm-1">
             <div class="btn-group" data-toggle="buttons">
-              <br>
-              <label class="btn btn-primary active btn-digits ">
-                <input type="radio" name="digit_right" value= "0" id="digit_right0" autocomplete="off">0
-              </label>
-
-              <% (1..9).each do |i| %>
+              <% (0..9).each do |i| %>
                  <br>
-                  <label class="btn btn-primary btn-digits">
-                    <input type="radio" name="digit_right" value= '<%= i %>' id='digit_right<%= i %>' autocomplete="off"> <%= i %>
-                  </label>
+                  <%= f.radio_button :digit_right, i %>
+                  <%= label :digit_right, i %>
               <% end %>
 
             </div>

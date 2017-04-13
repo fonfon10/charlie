@@ -152,6 +152,12 @@ input[type=radio]
 }
 
 
+.btn {
+
+  margin:0 auto;
+  display:block;
+}
+
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
@@ -159,3 +165,6 @@ input[type=radio]
 .btn-primary:focus {
     background-color: red;
 }
+
+
+

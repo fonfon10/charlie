@@ -22,6 +22,13 @@ class HitsController < ApplicationController
     
 
     @hit.player_id = params[:digit_left].to_i*10 + params[:digit_right].to_i
+    
+
+    if params[:head_state]
+      @hit.head = 1
+    else
+      @hit.head=0
+    end
 
     if @hit.save
       flash[:success] = "Hit was created successfully"
@@ -61,7 +68,7 @@ private
   end
 
   def hit_params
-    params.require(:hit).permit(:head, :chest, :back, :digit_left, :digit_right)    
+    params.require(:hit).permit(:head_state, :chest, :back, :digit_left, :digit_right)    
   end
 
 end

@@ -4,49 +4,28 @@
     
     <%= form_for(@hit, :html => {class: "form-horizontal", role: "form"}) do |f| %>
     <div class="form-group">
-
         <div class="col-sm-1">
-          <div class="btn-group" data-toggle="buttons">
-            <br>
-            <label class="btn btn-primary btn-digits ">
-              <input type="radio" name="digit_left" value="0" id="option1" autocomplete="off" checked>0
-            </label>
-
-            <br>
-
-            <label class="btn btn-primary btn-digits">
-              <input type="radio" name="digit_left" value="1" id="option2" autocomplete="off">1
-            </label>
-            
-            <br>
-
-            <label class="btn btn-primary btn-digits">
-              <input type="radio" name="digit_left" value="2" id="option3" autocomplete="off">2
-            </label>
-          </div>
+          <% (0..9).each do |i| %>
+            <div class="btn-group" data-toggle="buttons">
+              <br>
+              <label class="btn btn-primary btn-digits ">
+                <input type="radio" name="digit_left" value= '<%= i %>' id="option1" autocomplete="off" checked> <%= i %>
+              </label>
+            </div>
+          <% end %>
         </div>
 
         <div class="col-sm-1">
-          <div class="btn-group" data-toggle="buttons">
-            <br>
-            <label class="btn btn-primary btn-digits ">
-              <input type="radio" name="digit_right" value="0" id="option1" autocomplete="off" checked>0
-            </label>
-
-            <br>
-
-            <label class="btn btn-primary btn-digits">
-              <input type="radio" name="digit_right" value="1" id="option2" autocomplete="off">1
-            </label>
-            
-            <br>
-
-            <label class="btn btn-primary btn-digits">
-              <input type="radio" name="digit_right" value="2" id="option3" autocomplete="off">2
-            </label>
-          </div>
+          <% (0..9).each do |i| %>
+            <div class="btn-group" data-toggle="buttons">
+              <br>
+              <label class="btn btn-primary btn-digits ">
+                <input type="radio" name="digit_right" value= '<%= i %>' id="option1" autocomplete="off" checked> <%= i %>
+              </label>
+            </div>
+          <% end %>
         </div>
-      </div>
+
 
 
        <div class="form-group">

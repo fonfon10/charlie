@@ -78,7 +78,7 @@ private
   end
 
   def hit_params
-    params.require(:hit).permit(:comments, :head, :chest, :back, :digit_left, :digit_right)    
+    params.require(:hit).permit(:comments, :head, :chest, :back, :digit_left, :digit_right, :slurring)    
   end
 
 end

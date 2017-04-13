@@ -1,28 +1,73 @@
 <%= render 'shared/errors', obj: @hit %>
 
 <div class="row">
-  <div class="col-sm-12">
     
     <%= form_for(@hit, :html => {class: "form-horizontal", role: "form"}) do |f| %>
-      <div class="form-group">
-        <div class="control-label col-sm-1">
+    <div class="form-group">
 
+        <div class="col-sm-1">
           <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+            <br>
+            <label class="btn btn-primary btn-digits ">
+              <input type="radio" name="digit_left" value="0" id="option1" autocomplete="off" checked>0
             </label>
-            <label class="btn btn-primary">
-              <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+
+            <br>
+
+            <label class="btn btn-primary btn-digits">
+              <input type="radio" name="digit_left" value="1" id="option2" autocomplete="off">1
             </label>
-            <label class="btn btn-primary">
-              <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+            
+            <br>
+
+            <label class="btn btn-primary btn-digits">
+              <input type="radio" name="digit_left" value="2" id="option3" autocomplete="off">2
             </label>
           </div>
-
-
         </div>
- 
 
+        <div class="col-sm-1">
+          <div class="btn-group" data-toggle="buttons">
+            <br>
+            <label class="btn btn-primary btn-digits ">
+              <input type="radio" name="digit_right" value="0" id="option1" autocomplete="off" checked>0
+            </label>
+
+            <br>
+
+            <label class="btn btn-primary btn-digits">
+              <input type="radio" name="digit_right" value="1" id="option2" autocomplete="off">1
+            </label>
+            
+            <br>
+
+            <label class="btn btn-primary btn-digits">
+              <input type="radio" name="digit_right" value="2" id="option3" autocomplete="off">2
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+       <div class="form-group">
+         <div class="control-label col-sm-1">
+         </div>
+           <div class="col-sm-1">
+             <%= f.label "Head" %> <br />
+             <%= f.check_box :head, {:checked => 1, :unchecked => 0} %> <br />
+           </div>
+           <div class="col-sm-1">
+             <%= f.label "Chest" %> <br />
+             <%= f.check_box :chest, {:checked => 1, :unchecked => 0} %> <br />
+           </div>
+           <div class="col-sm-1">
+             <%= f.label "Back" %> <br />
+             <%= f.check_box :back, {:checked => 1, :unchecked => 0} %> <br />
+           </div>
+ 
+ 
+           </div>
+       </div>
 
       <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
@@ -39,7 +84,6 @@
     </div>
 
 
-  </div>
 
 </div>
 

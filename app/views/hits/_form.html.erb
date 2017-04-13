@@ -4,24 +4,25 @@
     
     <%= form_for(@hit, :html => {class: "form-horizontal", role: "form"}) do |f| %>
     <div class="form-group">
-        <div class="col-sm-1">
+        <div class="col-sm-2">
             <div class="btn-group" data-toggle="buttons">
 
               <% (0..9).each do |i| %>
-                 <br>
+                 
                   <%= f.radio_button :digit_left, i %>
                   <%= label :digit_left, i %>
+                  <br><br>
               <% end %>
 
             </div>
         </div>
 
-        <div class="col-sm-1">
+        <div class="col-sm-2">
             <div class="btn-group" data-toggle="buttons">
               <% (0..9).each do |i| %>
-                 <br>
                   <%= f.radio_button :digit_right, i %>
                   <%= label :digit_right, i %>
+                  <br><br>
               <% end %>
 
             </div>

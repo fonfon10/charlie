@@ -133,9 +133,14 @@ input[type=radio]
   -moz-transform: scale(2); /* FF */
   -webkit-transform: scale(3); /* Safari and Chrome */
   -o-transform: scale(2); /* Opera */
-  padding: 5px;
-  margin: 6px;
+  margin: 5px;
 }
+
+  label {
+    font-size: 300%;
+
+  }
+
 
 .playerdigit {
   font-size: 300%;

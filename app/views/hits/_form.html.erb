@@ -29,9 +29,6 @@
         </div>
 
 
-
-
-
             <div class="col-sm-3">
 
                   <%= f.check_box :head %> <span class="bodylabels">Head</span>
@@ -40,9 +37,7 @@
                   <br><br><br>
                   <%= f.check_box :back %> <span class="bodylabels">Back</span>
 
-
                 <br>
-
             </div>
 
 
@@ -57,8 +52,6 @@
         <br><br><br><br><br><br><br>
         <%= f.submit class: "btn btn-primary btn-lg btn-xlarge" %>
       </div>
-      <% end %>    
-
 
       </div>
 
@@ -70,6 +63,22 @@
 </div>
 
 
+        <div class="col-sm-6 col-sm-offset-2">
+            <div class="btn-group" data-toggle="buttons">
+              <% (1..7).each do |i| %>
+                  <%= f.radio_button :slurring, i %> 
+
+              <% end %>
+              <br>
+              <span class="afterlabels">1 2 3 4 5 6 7   - SLURRING</span>
+
+
+            </div>
+        </div>
+
+
+
+      <% end %>    
 
 
 </div>
